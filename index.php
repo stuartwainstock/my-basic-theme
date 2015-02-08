@@ -2,15 +2,15 @@
 
 <html lang="en">
 <head>
-	<title><?php bloginfo(); ?></title>
+	<title><?php bloginfo('name'); ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css" >
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" >
 </head>
 
 <body>
 
 	<header>
-		<h1>Stuart Wainstock | Designer</h1>
+		<h1><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></h1>
 		<nav>
 			<ul>
 				<li><a href="">Home</a></li>
