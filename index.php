@@ -13,57 +13,22 @@
 		<h1><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></h1>
 		<nav>
 			<ul>
-				<li><a href="">Home</a></li>
-				<li><a href="">About Us</a></li>
-				<li><a href="">Services</a></li>
-				<li><a href="">Portfolio</a></li>
-				<li><a href="">Contact Us</a></li>
+				<?php wp_nav_menu(  array('menu' => 'Main Nav')); ?>
 			</ul>
 		</nav> 
     </header>
 
     <section>
-    	<div>
+    </section>
+    	<?php if ( have_posts()) : while ( have_posts () ) : the_post(); ?>
 			<article>
-				<h1><a href="">This is an Article Title</a></h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla nisi, adipiscing eu laoreet vitae, venenatis vitae velit. Phasellus euismod dapibus velit in laoreet. Vivamus ornare justo vehicula felis scelerisque non aliquam nisl semper. Curabitur nisl mauris, posuere sed imperdiet vel, cursus id dolor. Suspendisse varius consequat lorem ac luctus. Maecenas consectetur neque at turpis elementum vitae eleifend sem blandit. Nullam auctor, risus nec porta lacinia, ante sapien bibendum massa, a semper tortor odio in nunc. </p>
+				<h2><a href="<?php the_permalink(); ?>" title="For more info on <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+				<?php the_content(); ?>
 			</article>
-			<article>
-				<h1><a href="">This is an Article Title</a></h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla nisi, adipiscing eu laoreet vitae, venenatis vitae velit. Phasellus euismod dapibus velit in laoreet. Vivamus ornare justo vehicula felis scelerisque non aliquam nisl semper. Curabitur nisl mauris, posuere sed imperdiet vel, cursus id dolor. Suspendisse varius consequat lorem ac luctus. Maecenas consectetur neque at turpis elementum vitae eleifend sem blandit. Nullam auctor, risus nec porta lacinia, ante sapien bibendum massa, a semper tortor odio in nunc. </p>
-			</article>
-			<article>
-				<h1><a href="">This is an Article Title</a></h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla nisi, adipiscing eu laoreet vitae, venenatis vitae velit. Phasellus euismod dapibus velit in laoreet. Vivamus ornare justo vehicula felis scelerisque non aliquam nisl semper. Curabitur nisl mauris, posuere sed imperdiet vel, cursus id dolor. Suspendisse varius consequat lorem ac luctus. Maecenas consectetur neque at turpis elementum vitae eleifend sem blandit. Nullam auctor, risus nec porta lacinia, ante sapien bibendum massa, a semper tortor odio in nunc. </p>
-			</article>
-			<article>
-				<h1><a href="">This is an Article Title</a></h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla nisi, adipiscing eu laoreet vitae, venenatis vitae velit. Phasellus euismod dapibus velit in laoreet. Vivamus ornare justo vehicula felis scelerisque non aliquam nisl semper. Curabitur nisl mauris, posuere sed imperdiet vel, cursus id dolor. Suspendisse varius consequat lorem ac luctus. Maecenas consectetur neque at turpis elementum vitae eleifend sem blandit. Nullam auctor, risus nec porta lacinia, ante sapien bibendum massa, a semper tortor odio in nunc. </p>
-			</article>
-			<article>
-				<h1><a href="">This is an Article Title</a></h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla nisi, adipiscing eu laoreet vitae, venenatis vitae velit. Phasellus euismod dapibus velit in laoreet. Vivamus ornare justo vehicula felis scelerisque non aliquam nisl semper. Curabitur nisl mauris, posuere sed imperdiet vel, cursus id dolor. Suspendisse varius consequat lorem ac luctus. Maecenas consectetur neque at turpis elementum vitae eleifend sem blandit. Nullam auctor, risus nec porta lacinia, ante sapien bibendum massa, a semper tortor odio in nunc. </p>
-			</article>
-			<article>
-				<h1><a href="">This is an Article Title</a></h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla nisi, adipiscing eu laoreet vitae, venenatis vitae velit. Phasellus euismod dapibus velit in laoreet. Vivamus ornare justo vehicula felis scelerisque non aliquam nisl semper. Curabitur nisl mauris, posuere sed imperdiet vel, cursus id dolor. Suspendisse varius consequat lorem ac luctus. Maecenas consectetur neque at turpis elementum vitae eleifend sem blandit. Nullam auctor, risus nec porta lacinia, ante sapien bibendum massa, a semper tortor odio in nunc. </p>
-			</article>
-			<article>
-				<h1><a href="">This is an Article Title</a></h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla nisi, adipiscing eu laoreet vitae, venenatis vitae velit. Phasellus euismod dapibus velit in laoreet. Vivamus ornare justo vehicula felis scelerisque non aliquam nisl semper. Curabitur nisl mauris, posuere sed imperdiet vel, cursus id dolor. Suspendisse varius consequat lorem ac luctus. Maecenas consectetur neque at turpis elementum vitae eleifend sem blandit. Nullam auctor, risus nec porta lacinia, ante sapien bibendum massa, a semper tortor odio in nunc. </p>
-			</article>
-			<article>
-				<h1><a href="">This is an Article Title</a></h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla nisi, adipiscing eu laoreet vitae, venenatis vitae velit. Phasellus euismod dapibus velit in laoreet. Vivamus ornare justo vehicula felis scelerisque non aliquam nisl semper. Curabitur nisl mauris, posuere sed imperdiet vel, cursus id dolor. Suspendisse varius consequat lorem ac luctus. Maecenas consectetur neque at turpis elementum vitae eleifend sem blandit. Nullam auctor, risus nec porta lacinia, ante sapien bibendum massa, a semper tortor odio in nunc. </p>
-			</article>
-			<article>
-				<h1><a href="">This is an Article Title</a></h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla nisi, adipiscing eu laoreet vitae, venenatis vitae velit. Phasellus euismod dapibus velit in laoreet. Vivamus ornare justo vehicula felis scelerisque non aliquam nisl semper. Curabitur nisl mauris, posuere sed imperdiet vel, cursus id dolor. Suspendisse varius consequat lorem ac luctus. Maecenas consectetur neque at turpis elementum vitae eleifend sem blandit. Nullam auctor, risus nec porta lacinia, ante sapien bibendum massa, a semper tortor odio in nunc. </p>
-			</article>
-			<article>
-				<h1><a href="">This is an Article Title</a></h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla nisi, adipiscing eu laoreet vitae, venenatis vitae velit. Phasellus euismod dapibus velit in laoreet. Vivamus ornare justo vehicula felis scelerisque non aliquam nisl semper. Curabitur nisl mauris, posuere sed imperdiet vel, cursus id dolor. Suspendisse varius consequat lorem ac luctus. Maecenas consectetur neque at turpis elementum vitae eleifend sem blandit. Nullam auctor, risus nec porta lacinia, ante sapien bibendum massa, a semper tortor odio in nunc. </p>
-			</article>
-		</div>
+		<?php endwhile; else: ?>
+		<p><?php _e('Sorry, no posts matched your criteria.' ); ?></p>
+	<?php endif; ?>
+	</section>
 </body>
 </html>
+
